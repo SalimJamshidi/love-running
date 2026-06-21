@@ -25,11 +25,42 @@ body {
 /* Header */
 header {
     background-color: #ffffff;
-    padding: 0 rem;
+    padding: 0 1rem;
     position: fixed;
     z-index: 99;
     width: 100%;
-    box-shadow: 0 2px 2px #3a3a3a;  
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    align-items: baseline;
+   
+  
+}
+
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+   
+}
+#nav-toggle:checked~nav {
+    display: block;
+}
+#nav-toggle {
+    display:none;
+}
+.nav-toggle-label {
+    font-size: 2rem;
+    cursor: pointer;
+}
+    
+    
 }
 header a {
     text-decoration: none;
@@ -41,6 +72,7 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
+    padding-left: 0.5rem;
 }
 #menu {
 font-size: 110%;
@@ -57,12 +89,18 @@ list-style-type: none;
     border-bottom: 1px solid #3a3a3a;
 }
 
+/* nav toogle bar */
+
+
+
+
 
 /* Main content */
 main {
     background-color: lightblue;
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
+    margin-top: 47px;
 }
 
 /* Footer */
