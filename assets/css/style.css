@@ -31,12 +31,8 @@ header {
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
     display: flex;
-    justify-content: flex-start;
-    gap: 0.5rem;
+    justify-content: space-between;
     align-items: baseline;
-   
-  
-}
 
 nav {
     position: absolute;
@@ -104,6 +100,15 @@ main {
 }
 
 /* Footer */
-footer {
-    background-color: orange;
+#social-networks {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    list-style-type: none;
+}
+#social-networks i {
+    font-size: 160%;
+    padding: 0.5rem;
+    color: #3a3a3a;
 }
