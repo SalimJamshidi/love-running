@@ -139,31 +139,32 @@ main {
     padding: 5%;
     color: #3a3a3a;
 }
+
 /* Reasons section */
 #reasons {
+    width: 90%;
     margin: 20px auto;
-    width: 90%; /* breathing space on sides */
 }
 
 #reasons h2 {
     margin-bottom: 20px;
     text-align: center;
-    font-size: 2rem; /* keep size specific — don’t override others */
+    font-size: 280%;
 }
 
 #benefits-physical > div,
 #benefits-mental > div {
     line-height: 20px;
-    margin-bottom: 20px; /* space between items */
+    margin-bottom: 20px;
 }
 
 #benefits p {
-    padding: 0 20px; /* left/right padding on text */
+    padding: 0 20px;
 }
 
 #benefits hr {
-    border-top: 1px solid #3a3a3a; /* same colour as text */
-    margin: 5px 0; /* small margin top/bottom */
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
 }
 
 /* Media query: tablets and larger (768px and up) */
