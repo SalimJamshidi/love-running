@@ -13,18 +13,18 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
 
 h1, h2, h3 {
-    font-family: oswald, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     color: #252525;
-    padding-left: 0.5rem;
+    padding-left: 0.3125rem;
 }
+
 /* Header */
 header {
     background-color: #ffffff;
@@ -32,7 +32,7 @@ header {
     position: fixed;
     z-index: 99;
     width: 100%;
-    box-shadow: 0 2px 2px #3a3a3a;
+    box-shadow: 0 0.125rem 0.125rem #3a3a3a;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -45,16 +45,16 @@ header a {
 
 #menu {
     font-size: 110%;
-    letter-spacing: 4px;
+    letter-spacing: 0.25rem;
     list-style-type: none;
 }
 
 #menu > li {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 .active {
-    border-bottom: 1px solid #3a3a3a;
+    border-bottom: 0.0625rem solid #3a3a3a;
 }
 
 /* Navbar styles with dropdown toggle */
@@ -64,7 +64,7 @@ nav {
     width: 100%;
     left: 0;
     padding: 0 1rem;
-    box-shadow: 0 2px 2px #3a3a3a;
+    box-shadow: 0 0.125rem 0.125rem #3a3a3a;
     display: none;
     top: 100%;
 }
@@ -91,44 +91,34 @@ main {
 
 /* Hero section */
 #hero {
-    height: 600px;
+    height: 37.5rem;
     width: 100%;
-    background-image: url("../images/hero-image.webp");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background: url("../images/hero-image.webp") no-repeat center center / cover;
+    position: relative;
 }
 
-
 #cover-text {
-    background-color: rgba(241, 109, 107, .7);
+    background-color: rgba(241, 109, 107, 0.7);
     font-size: 130%;
     position: absolute;
-    bottom: 30px;
-    width: 70%;
-    min-height: 30%;
-    padding-top: 2%;
-    padding-left: 10px;
-    bottom: 20%;
-    margin-bottom: 27px;
-}
-
-#cover-text {
-    background-color: rgba(241, 109, 107, .7);
-    font-size: 130%;
-    margin: 4px 0;
+    bottom: 1.875rem;
+    left: 0;
+    width: 17.5rem;
+    min-height: 7.5rem;
+    padding: 0.75rem 0.9375rem;
     text-transform: uppercase;
-    line-height: 1.2;
-
 }
 
 #cover-text > h2, #cover-text > h3 {
-    color:#ffffff; }
+    color: #ffffff;
+    margin: 0.25rem 0;
+    line-height: 1.2;
+}
 
 /* Footer */
 #social-networks {
     text-align: center;
-    padding: 20px 0;
+    padding: 1.25rem 0;
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
@@ -143,67 +133,56 @@ main {
 /* Reasons section */
 #reasons {
     width: 90%;
-    margin: 20px auto;
+    margin: 1.25rem auto;
 }
 
 #reasons h2 {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     text-align: center;
     font-size: 280%;
 }
 
+#benefits h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #benefits-physical > div,
 #benefits-mental > div {
-    line-height: 20px;
-    margin-bottom: 20px;
+    line-height: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 #benefits p {
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 
 #benefits hr {
-    border-top: 1px solid #3a3a3a;
-    margin: 5px 0;
+    border-top: 0.0625rem solid #3a3a3a;
+    margin: 0.3125rem 0;
 }
-/* image for circle */
+
+/* ✅ IMAGE FOR CIRCLE — PERFECT, RESPONSIVE */
 #circle-cover-bg {
-    background: url("../images/reasons-image.webp") no-repeat top center / cover;
-    height: 80vw;
+    background: url("../images/reasons-image.webp") no-repeat center center / cover;
     width: 80vw;
-    margin: 1.875rem auto;;
-    /* Make the image circular */
+    height: 80vw;
+    margin: 1.875rem auto;
     border-radius: 50%;
-    max-width: 17.5rem;
+    max-width: 17.5rem;   /* ✅ NEVER BIGGER THAN 280px */
     max-height: 17.5rem;
-    
 }
 
 #benefits-image {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-
-/* Media query: tablets and larger (768px and up) */
+/* ✅ MEDIA QUERY — TABLETS / IPAD / LAPTOP (768px and up) */
 @media screen and (min-width: 768px) {
     /* Header */
-    #benefits {
-        position: relative;
-        padding-right: 20rem;
-
-    }
-
-    #circle-cover-bg {
-        width: 17.rem;
-        height: 17.5rem;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        margin: 0;
-    }
     nav {
         display: block;
         position: relative;
@@ -211,8 +190,6 @@ main {
         width: fit-content;
         padding-right: 1rem;
     }
-    
-    
 
     #menu {
         display: flex;
@@ -228,26 +205,49 @@ main {
 
     #logo {
         font-size: 280%;
-        line-height: 75px;
+        line-height: 4.6875rem;
         margin: 0 0.5rem;
     }
 
     /* Main content */
     main {
-        /* Push main content down to accommodate larger header */
-        margin-top: 79px;
+        margin-top: 4.9375rem;
     }
 
     /* Hero image */
     #cover-text {
-        width: 300px;
-        right: 50px;
+        width: 18.75rem;
+        right: 3.125rem;
+    }
+
+    /* ✅ BENEFITS LAYOUT — TEXT LEFT, CIRCLE RIGHT */
+    #benefits {
+        position: relative;
+        padding-right: 20rem; /* ✅ SPACE FOR CIRCLE ON RIGHT */
+    }
+
+    /* ✅ CIRCLE — FIXED SIZE, PERFECT ROUND, POSITIONED RIGHT */
+    #circle-cover-bg {
+        width: 17.5rem;
+        height: 17.5rem;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin: 0;
+        max-width: none;
+        max-height: none;
+    }
+
+    #benefits-physical,
+    #benefits-mental {
+        width: 100%;
     }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover{
-        border-bottom: 1px solid #3a3a3a;
+    #menu a:hover {
+        border-bottom: 0.0625rem solid #3a3a3a;
     }
 }
