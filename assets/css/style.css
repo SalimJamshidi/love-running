@@ -105,15 +105,21 @@ main {
     font-size: 130%;
     position: absolute;
     bottom: 30px;
-    width: 80%;
-    min-height: 100px;
+    left: auto;
+    width: 280px;
+    min-height: auto;
     padding-top: 40%;
     padding-left: 10px;
+    box-sizing: border-box;
 }
 
 #cover-text {
     background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
+    margin: 4px 0;
+    text-transform: uppercase;
+    line-height: 1.2;
+
 }
 
 #cover-text > h2, #cover-text > h3 {
@@ -132,6 +138,32 @@ main {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
+}
+/* Reasons section */
+#reasons {
+    margin: 20px auto;
+    width: 90%; /* breathing space on sides */
+}
+
+#reasons h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem; /* keep size specific — don’t override others */
+}
+
+#benefits-physical > div,
+#benefits-mental > div {
+    line-height: 20px;
+    margin-bottom: 20px; /* space between items */
+}
+
+#benefits p {
+    padding: 0 20px; /* left/right padding on text */
+}
+
+#benefits hr {
+    border-top: 1px solid #3a3a3a; /* same colour as text */
+    margin: 5px 0; /* small margin top/bottom */
 }
 
 /* Media query: tablets and larger (768px and up) */
