@@ -168,20 +168,42 @@ main {
 }
 /* image for circle */
 #circle-cover-bg {
-    width: 90vw;
-    height: 90vw;
+    background: url("../images/reasons-image.webp") no-repeat top center / cover;
+    height: 80vw;
+    width: 80vw;
+    margin: 1.875rem auto;;
+    /* Make the image circular */
     border-radius: 50%;
-    background-image: url("../images/reasons-image.webp");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    margin: 20px auto;
+    max-width: 17.5rem;
+    max-height: 17.5rem;
     
 }
+
+#benefits-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
     /* Header */
+    #benefits {
+        position: relative;
+        padding-right: 20rem;
+
+    }
+
+    #circle-cover-bg {
+        width: 17.rem;
+        height: 17.5rem;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin: 0;
+    }
     nav {
         display: block;
         position: relative;
@@ -189,11 +211,8 @@ main {
         width: fit-content;
         padding-right: 1rem;
     }
-    #circle-cover-bg {
-        width: 280vw;
-        height: 280px;
-        margin: 0;
-    }
+    
+    
 
     #menu {
         display: flex;
