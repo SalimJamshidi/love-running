@@ -105,12 +105,12 @@ main {
     font-size: 130%;
     position: absolute;
     bottom: 30px;
-    left: auto;
-    width: 280px;
-    min-height: auto;
-    padding-top: 40%;
+    width: 70%;
+    min-height: 30%;
+    padding-top: 2%;
     padding-left: 10px;
-    box-sizing: border-box;
+    bottom: 20%;
+    margin-bottom: 27px;
 }
 
 #cover-text {
