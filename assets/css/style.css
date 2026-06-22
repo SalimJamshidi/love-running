@@ -154,7 +154,14 @@ main {
 #benefits-mental > div {
     line-height: 1.25rem;
     margin-bottom: 1.25rem;
+    width: 75%;
 }
+
+#benefits-mental > div {
+    text-align: end;
+    align-self: flex-end;
+}
+
 
 #benefits p {
     padding: 0 1.25rem;
@@ -243,6 +250,7 @@ main {
 
     #benefits-physical,
     #benefits-mental {
+        flex-direction: column;
         width: 100%;
     }
 }
