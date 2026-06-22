@@ -106,7 +106,7 @@ main {
     position: absolute;
     bottom: 30px;
     width: 80%;
-    min-height: 200px;
+    min-height: 100px;
     padding-top: 40%;
     padding-left: 10px;
 }
