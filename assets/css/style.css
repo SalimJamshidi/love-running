@@ -166,6 +166,18 @@ main {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
+/* image for circle */
+#circle-cover-bg {
+    width: 90vw;
+    height: 90vw;
+    border-radius: 50%;
+    background-image: url("../images/reasons-image.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 20px auto;
+    
+}
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
@@ -176,6 +188,11 @@ main {
         box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
+    }
+    #circle-cover-bg {
+        width: 280vw;
+        height: 280px;
+        margin: 0;
     }
 
     #menu {
