@@ -161,6 +161,10 @@ main {
     align-items: center;
     justify-content: center;
 }
+#circle-cover-bg {
+    display: flex;
+    align-items: center;
+}
 
 /* Footer */
 #social-networks {
