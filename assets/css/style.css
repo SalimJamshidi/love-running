@@ -175,7 +175,7 @@ main {
 }
 
 #times {
-    background: url("../images/chel.jpg") no-repeat center / cover;
+    background: url("../images/chelt.jpg") no-repeat center / cover;
     display: flex;
     flex-wrap: wrap;
 }
