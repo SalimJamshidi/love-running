@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
@@ -12,18 +13,16 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
 
-h1,
-h2,
-h3 {
-    font-family: 'Oswald', sans-serif;
+h1, h2, h3 {
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
+    padding-left: 0.5rem;
 }
 
 /* Header */
@@ -44,14 +43,18 @@ header a {
     color: inherit;
 }
 
+#logo {
+    font-size: 200%;
+}
+
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
 
-#menu>li {
-    margin-bottom: 1em;
+#menu > li {
+    margin-bottom: 1rem;
 }
 
 .active {
@@ -71,10 +74,6 @@ nav {
 }
 
 /* Nav toggle */
-#nav-toggle:checked~nav {
-    display: block;
-}
-
 #nav-toggle {
     display: none;
 }
@@ -83,9 +82,16 @@ nav {
     font-size: 2rem;
 }
 
+.nav-toggle-label i {
+    color: #252525;
+}
+
+#nav-toggle:checked~nav {
+    display: block;
+}
+
 /* Main content */
 main {
-    /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     margin-top: 47px;
 }
@@ -94,24 +100,22 @@ main {
 #hero {
     height: 600px;
     width: 100%;
-    background: url("../images/hero-image.webp") no-repeat center center/cover;
+    background: url("../images/hero-image.webp") no-repeat center center / cover;
     position: relative;
 }
 
 #cover-text {
-    /* Final rgba value sets the opacity so it is semi-transparent */
-    background-color: rgba(241, 109, 107, .7);
+    background-color: rgba(241, 109, 107, 0.7);
     font-size: 130%;
     position: absolute;
     bottom: 30px;
-    width: 80%;
+    left: 0;
+    width: 300px;
     min-height: 200px;
-    padding-top: 40px;
-    padding-left: 10px;
+    padding: 40px 0 0 10px;
 }
 
-#cover-text>h2,
-#cover-text>h3 {
+#cover-text h2, #cover-text h3 {
     color: #ffffff;
 }
 
@@ -127,8 +131,14 @@ main {
     font-size: 280%;
 }
 
-#benefits-physical>div,
-#benefits-mental>div {
+#benefits h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#benefits-physical > div,
+#benefits-mental > div {
     line-height: 20px;
     margin-bottom: 20px;
 }
@@ -142,12 +152,12 @@ main {
     margin: 5px 0;
 }
 
+/* Circle image — MOBILE FIRST */
 #circle-cover-bg {
-    background: url('../images/reasons-image.webp') no-repeat top center / cover;
-    height: 90vw;
-    width: 90vw;
-    margin-bottom: 20px;
-    /* Makes the square image into a circle */
+    background: url("../images/reasons-image.webp") no-repeat center center / cover;
+    width: 80vw;
+    height: 80vw;
+    margin: 20px auto;
     border-radius: 50%;
     max-width: 300px;
     max-height: 300px;
@@ -159,29 +169,28 @@ main {
     justify-content: center;
 }
 
-/* Meetup Times section */
+/* Meetup section */
+#meetups {
+    margin: 20px 0;
+}
+
 #times {
-    background: url('../images/dublin-city.webp') no-repeat center/cover;
-    /* Handles responsivity without the need for a media query */
+    background: url("../images/dublin-city.webp") no-repeat center / cover;
     display: flex;
     flex-wrap: wrap;
 }
 
 #times div {
     color: #fafafa;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 15px;
     text-align: center;
-    /* This will not wrap on screens of less than 400px wide.
-    Each div will expand to fill the available space on its row */
     flex-basis: 200px;
     flex-grow: 1;
-    /* Creates a grid of meetup time divs over the background image */
     border: 2px solid white;
 }
 
 #times h3 {
-    /* Override the heading colour set in general styles */
     color: #fafafa;
 }
 
@@ -200,10 +209,8 @@ main {
     color: #3a3a3a;
 }
 
-/* Media query: tablets and larger (768px and up) */
+/* ✅ TABLETS (768px and up) */
 @media screen and (min-width: 768px) {
-
-    /* Header */
     nav {
         display: block;
         position: relative;
@@ -216,7 +223,7 @@ main {
         display: flex;
     }
 
-    #menu>li {
+    #menu > li {
         padding-left: 1rem;
     }
 
@@ -230,19 +237,16 @@ main {
         margin: 0 0.5rem;
     }
 
-    /* Main content */
     main {
-        /* Push main content down to accommodate larger header */
         margin-top: 79px;
     }
 
-    /* Hero */
     #cover-text {
         width: 300px;
         right: 50px;
+        left: auto;
     }
 
-    /* Reasons section */
     #benefits-physical,
     #benefits-mental {
         display: flex;
@@ -250,48 +254,59 @@ main {
         width: 100%;
     }
 
-    #benefits-physical>div,
-    #benefits-mental>div {
+    #benefits-physical > div {
         width: 75%;
+        text-align: right;
     }
 
-    #benefits-mental>div {
-        text-align: end;
+    #benefits-mental > div {
+        width: 75%;
         align-self: flex-end;
     }
-}
 
-/* Large devices (laptops and desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-    #menu a:hover {
-        border-bottom: 1px solid #3a3a3a;
+    #circle-cover-bg {
+        max-width: 300px;
+        max-height: 300px;
     }
 }
 
-@media screen and (min-width: 1200px) {    
-    /* Reasons section */
+/* ✅ LARGE SCREENS — 1200px+ — PERFECT LAYOUT */
+@media screen and (min-width: 1200px) {
     #benefits {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     #benefits > div {
         flex: 1;
+        margin: 0 1rem;
     }
 
     #benefits-image {
-        order: 0
+        order: 0;
     }
 
     #benefits-mental {
         order: 1;
     }
 
-    #benefits-mental > div {
-        align-self: flex-start;
-    }
-
     #benefits-physical > div {
         align-self: flex-end;
+        text-align: right;
+    }
+
+    #benefits-mental > div {
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    #circle-cover-bg {
+        width: 300px;
+        height: 300px;
+        margin: 0;
+        max-width: none;
+        max-height: none;
     }
 }
