@@ -162,12 +162,7 @@ main {
     justify-content: center;
 }
 /* meetup items section*/
-#times {
-    background: url("..images/chel.jpg") no-repeat center/cover;
-    /* handle responsive without the need for media query*/
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 #circle-cover-bg {
     display: flex;
