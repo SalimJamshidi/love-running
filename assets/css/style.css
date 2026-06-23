@@ -161,7 +161,7 @@ main {
     align-items: center;
     justify-content: center;
 }
-
+/* meetup items section*/
 #times {
     background: url("..images/chel.jpg") no-repeat center/cover;
     /* handle responsive without the need for media query*/
