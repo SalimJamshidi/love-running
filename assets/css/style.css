@@ -229,11 +229,6 @@ main {
         right: 3.125rem;
     }
 
-    /* ✅ BENEFITS LAYOUT — TEXT LEFT, CIRCLE RIGHT */
-    #benefits {
-        position: relative;
-        padding-right: 20rem; /* ✅ SPACE FOR CIRCLE ON RIGHT */
-    }
 
     /* ✅ CIRCLE — FIXED SIZE, PERFECT ROUND, POSITIONED RIGHT */
     #circle-cover-bg {
@@ -252,6 +247,65 @@ main {
     #benefits-mental {
         flex-direction: column;
         width: 100%;
+    }
+    #benefits-physical > div,
+    #benefits-mental > div {
+        width: 75%;
+
+    }
+
+     /* ✅ BENEFITS LAYOUT — TEXT LEFT, CIRCLE RIGHT */
+    #benefits-mental > div {
+       text-align: end;
+       align-self: flex-end; /* ✅ SPACE FOR CIRCLE ON RIGHT */
+    }
+    /* Large screen (1200px and wider ) */
+    @media screen and (min-width: 1200px) {
+
+      #benefits {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+      }  
+
+       #benefits-physical,
+        #benefits-mental {
+            width: 30;
+
+        }
+
+         #benefits-image {
+            width: 30%
+            margin: 0 auto;
+         }
+
+          #benefits-physical {
+            display: flex;
+            flex-direction: column;
+          }
+
+           #benefits-mental {
+            display: flex;
+            flex-direction: column;
+
+           }
+
+            #circle-cover-bg {
+                width: 300px;
+                height: 300px
+                margin: 0;
+            }
+
+             #benefits h3 {
+                text-align: right;
+             }
+
+              #benefits-mental h3 {
+                text-align: left;
+              }
+
     }
 }
 
