@@ -20,6 +20,7 @@ body {
     display: none;
 }
 
+
 h1, h2, h3 {
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
@@ -195,6 +196,15 @@ main {
 
 #times h3 {
     color: #fafafa;
+}
+
+/* gallery images */
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
+#photos {
+    line-height: 0;
 }
 
 /* Footer */
