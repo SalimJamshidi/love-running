@@ -290,6 +290,25 @@ main {
         max-width: 300px;
         max-height: 300px;
     }
+    /*gallery */
+    #photos {
+        column-count: 3;
+    }
+}
+
+/* large device (laptop and desktops, 992px and up) */
+@media screen and. (min-width: 992px) {
+
+     #menu a:hover{
+        border-bottom: 1px solid  #3a3a3a;
+     }
+
+     /*gallery*/
+      #photos {
+        column-count 4;
+      }
+
+
 }
 
 /* ✅ LARGE SCREENS — 1200px+ — PERFECT LAYOUT */
