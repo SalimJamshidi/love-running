@@ -222,6 +222,14 @@ main {
     color: #3a3a3a;
 }
 
+/* media query: larger or landscape  (576px and ups) */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
+
 /* ✅ TABLETS (768px and up) */
 @media screen and (min-width: 768px) {
     nav {
