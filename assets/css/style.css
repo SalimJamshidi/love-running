@@ -226,7 +226,8 @@ main {
 @media screen and (min-width: 576px) {
     #photos {
         column-count: 2;
-        column-gap: 0;
+        column-width: 50%
+        column-gap: 0.5rem;
     }
 }
 
