@@ -306,8 +306,10 @@ main {
 
      /*gallery*/
       #photos {
-        column-count 4;
+        column-count: 4;
         column-gap: 0;
+        
+    
       }
 
 
@@ -353,7 +355,7 @@ main {
         max-height: none;
     }
      #photos {
-        column-count: 5;
+        column-count: 4;
         column-gap: 0;
      }
 }
