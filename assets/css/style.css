@@ -222,6 +222,60 @@ main {
     color: #3a3a3a;
 }
 
+  /*sign up form mobile style - coliummn direction no impact on other layouts*/
+  main {
+    display: flex;
+    flex-direction: column;
+
+  }
+  /* signup section set back ground and padding matchs */
+    #signup {
+        background: url("..images/signup-image.web") no-repeat center center / cover;
+        flex-grow: 1;
+        padding: 20px 10%;
+
+    }
+
+      #signup-form {
+        background-color: rgba(60, 60, 0.6);
+        color:   #fafafa;
+        padding: 30px;
+      }
+
+        #signup-form h2 {
+            color:   #fafafa;
+            margin-bottom: 20px;
+        }
+
+        .text-input {
+            background-color: transparent;
+            color:   #fafafa;
+            border: 1px solid   #fafafa;
+            border-radius: 2px;
+            width: 100%
+            height: 25px;
+            margin: 5px 0 20px 0;
+            padding: 0 5px;
+        }
+        .radio-buttons {
+
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+
+        }
+
+        .join-button {
+            background-color:   #454b1b;
+            color:   #fafafa;
+            border-radius: 2px;
+            font-size: 100%;
+            padding: 15px 32px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
 /* media query: larger or landscape  (576px and ups) */
 @media screen and (min-width: 576px) {
     #photos {
